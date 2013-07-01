@@ -5,13 +5,11 @@
  * Time: 2:18 PM
  * To change this template use File | Settings | File Templates.
  */
-function BikeShop(builder){
-    this.builder = builder;
-
-    this.createBike = function(){
-        builder.makeFrame();
-        builder.makeSeats();
-        builder.makeWheels();
+function BikeShop(){
+    this.BuildBike = function(builder){
+        builder.buildFrame();
+        builder.buildSeats();
+        builder.buildWheels();
         builder.addCoolness();
         return builder.bike;
     };

@@ -12,15 +12,15 @@ function RoadBikeBuilder(){
     Builder.call(this);
     this.bike = new Bike();
 
-    this.makeWheels = function(){
+    this.buildWheels = function(){
         this.bike.wheels = "fat";
     };
 
-    this.makeFrame = function(){
+    this.buildFrame = function(){
         this.bike.frame =  "sturdy";
     };
 
-    this.makeSeats = function(){
+    this.buildSeats = function(){
         this.bike.seats = 1;
     };
 

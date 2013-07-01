@@ -12,15 +12,15 @@ function HipsterBikeBuilder(){
     Builder.call(this);
     this.bike = new Bike();
 
-    this.makeWheels = function(){
+    this.buildWheels = function(){
         this.bike.wheels = "skinny";
     };
 
-    this.makeFrame = function(){
+    this.buildFrame = function(){
         this.bike.frame =  "superFly";
     };
 
-    this.makeSeats = function(){
+    this.buildSeats = function(){
         this.bike.seats = 1;
     };
 

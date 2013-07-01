@@ -12,15 +12,15 @@ function TandemBikeBuilder(){
     Builder.call(this);
     this.bike = new Bike();
 
-    this.makeWheels = function(){
+    this.buildWheels = function(){
         this.bike.wheels = "normal";
     };
 
-    this.makeFrame = function(){
+    this.buildFrame = function(){
         this.bike.frame =  "long";
     };
 
-    this.makeSeats = function(){
+    this.buildSeats = function(){
         this.bike.seats = 2;
     };
 
