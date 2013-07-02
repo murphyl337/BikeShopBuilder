@@ -6,8 +6,20 @@
  * To change this template use File | Settings | File Templates.
  */
 function Builder(){
-    this.buildWheels = function(){};
-    this.buildFrame = function(){};
-    this.buildSeats = function(){};
-    this.addCoolness = function(){};
+    this.bike = new Bike();
+
+    this.setType = function(type){
+        this.bike.type = type;
+    };
+    this.setFrame = function(frame){
+        this.bike.frame = frame;
+    };
+    this.setSeats = function(seats){
+        this.bike.seats = seats;
+    };
+    this.setCoolness = function(coolness){
+        this.bike.coolness = coolness;
+    };
+
+    this.getResult = function(){ return this.bike };
 }

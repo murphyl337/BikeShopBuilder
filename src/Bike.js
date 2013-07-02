@@ -6,13 +6,13 @@
  * To change this template use File | Settings | File Templates.
  */
 function Bike(){
-    this.wheels;
+    this.type;
     this.coolness;
     this.frame;
     this.seats;
 
     this.view = function(){
-        console.log("Wheels: " + this.wheels);
+        console.log("Type: " + this.type);
         console.log("Frame: " + this.frame);
         console.log("Seats: " + this.seats);
         console.log("Coolness: " + this.coolness);

@@ -1,28 +1,33 @@
 describe("Shop", function(){
-    var hipsterBuilder, roadBuilder, tandemBuilder, shop, bike;
+    var builder;
     beforeEach(function(){
-       hipsterBuilder = new HipsterBikeBuilder();
-       roadBuilder = new RoadBikeBuilder();
-       tandemBuilder = new TandemBikeBuilder();
-       shop = new BikeShop();
+       builder = new Builder();
     });
 
     it("should build a hipster bike", function(){
-        var bike = shop.BuildBike(hipsterBuilder);
+        builder.setType("hipster");
+        builder.setFrame("tribal frame");
+        builder.setSeats(1);
+        builder.setCoolness("before coolness");
 
-        expect(bike.coolness).toBe("pre-dates cool");
+        expect(builder.getResult().type).toBe("hipster");
     });
 
     it("should build a tandem bike", function(){
-        var bike = shop.BuildBike(tandemBuilder);
+        builder.setType("tandem");
+        builder.setFrame("extra long");
+        builder.setSeats(1);
+        builder.setCoolness("not even cool");
 
-        expect(bike.coolness).toBe("never ever cool");
-        expect(bike.seats).toBe(2);
+        expect(builder.getResult().type).toBe("tandem");
     });
 
     it("should build a road bike", function(){
-        var bike = shop.BuildBike(roadBuilder);
+        builder.setType("road");
+        builder.setFrame("light weight");
+        builder.setSeats(1);
+        builder.setCoolness("lance armstrong cool");
 
-        expect(bike.coolness).toBe("kinda cool");
+        expect(builder.getResult().type).toBe("road");
     });
 });

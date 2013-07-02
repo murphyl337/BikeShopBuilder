@@ -11,7 +11,6 @@ function run(){
     var tandemBuilder = new TandemBikeBuilder();
     var shop = new BikeShop(hipsterBuilder);
 
-    var bike = null;
-    bike = shop.createBike();
+    var bike = shop.BuildBike(hipsterBuilder);
     bike.view();
 }
